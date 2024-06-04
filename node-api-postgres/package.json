@@ -1,0 +1,17 @@
+{
+  "name": "node-api-postgres",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "RESTful API with Node.js, Express, and PostgreSQL",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "express": "^4.19.2",
+    "pg": "^8.11.5"
+  }
+}
