@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forms.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form 
+            method="post"
+            class="form form_registration" 
+            name="form"
+            id="form_reg" 
+            style="display: block;"
+            novalidate
+        >
+            <h1>Регистрация</h1>
+            <div class="container__form">
+                <div class="wrap_field">
+                    <label 
+                        class="label_name" 
+                        for="user_name">Ваше имя</label>
+                    <input
+                         class = "type-input" 
+                         type = "text" 
+                         id = "user_name" 
+                         pattern = "^[a-zA-Zа-яА-ЯЁё\s\-]+$" 
+                         minlength = "2"  
+                         maxlength = "30"
+                         data-error-message = "Разрешены символы латиницы, кириллицы."
+                         aria-describedby="name-error"
+                         required/>
+                    <span
+                        class="user_name-error" 
+                        id="name-error" 
+                        aria-live="polite">
+                    </span>
+                </div>
+                <div class="wrap_field">
+                    <label class="label_sername" for="user_sername">Ваша фамилия</label>
+                    <input 
+                         class = "type-input"  
+                         type="text" 
+                         id="user_sername" 
+                         pattern = "^[a-zA-Zа-яА-ЯЁё\s\-]+$"
+                         minlength="2" 
+                         maxlength="30"
+                         data-error-message = "Разрешены символы латиницы, кириллицы."
+                         aria-describedby="sername-error"
+                         required/>
+                    <span 
+                        class="user_sername-error" 
+                        id="surname-error" 
+                        aria-live="polite"></span>
+                </div>
+                <div class="wrap_field">
+                    <label class="label_email" for="user_email">Ваша почта</label>
+                    <input  
+                        class = "type-input" 
+                        type="email" 
+                        id="user_email" 
+                        pattern="([a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?\.)"
+                        aria-describedby="email-error"
+                        required />
+                    <span 
+                        class="user_email-error" 
+                        id="user_email" 
+                        aria-live="polite"></span>
+                </div>
+                <div class="wrap_field">
+                    <label class="label_age" for="user_age">Ваш возраст</label>
+                    <input  
+                        class = "type-input"  
+                        type="number" 
+                        id="user_age" 
+                        min="18"
+                        max="90"
+                        aria-describedby="age-error" 
+                        required/>
+                    <span
+                        class="user_age-error"
+                        id="user-age"
+                        aria-live="polite">
+                    </span>    
+                </div>
+                <div class="wrap_field">
+                    <label class="label_password" for="user_password">Придумайте пароль</label>
+                    <input  
+                        class = "type-input"  
+                        type="password" 
+                        id="user_password" 
+                        minlength="6" 
+                        maxlength="20"
+                        aria-describedby="password-error"
+                        required/>
+                    <span 
+                        class="user_password-error" 
+                        id="user_password" 
+                        aria-live="polite"></span>
+                </div>
+                <div class="wrap_field">
+                    <label class="label_repeat_password" for="user_repeat_password">Повторите пароль</label>
+                    <input  
+                        class = "type-input"  
+                        type="password" 
+                        id="user_repeat_password"
+                        minlength="6"
+                        maxlength="20" 
+                        aria-describedby="reppassword-error"
+                        required/>
+                    <span 
+                        class="user_repeat_password-error" 
+                        id="rep-password-error" 
+                        aria-live="polite"></span>
+                </div>
+                <div class="wrapper_button">
+                    <button 
+                        class="button but_submit" 
+                        type="submit" 
+                        id="registration_form">Зарегистрироваться</button>
+                    <span 
+                        class="empty-error" 
+                        id="empty-error" 
+                        aria-live="polite">
+                    </span>
+                    <button 
+                        type="button" 
+                        id="button_enter">Войти</button>
+                </div>
+            </div>
+        </form>
+        <form 
+            class="form form_login" 
+            id="form_log" 
+            style="display: none;"
+            method="post"
+            novalidate>
+            <h1>Войти</h1>
+            <div class="container__form">
+                <div class="wrap_field">
+                    <label 
+                        class="label_name_login" 
+                        for="user_name_login">Ваше имя</label>
+                    <input  
+                        class = "type-input"  
+                        type="text" 
+                        id="user_name_login"  
+                        minlength="2"
+                        maxlength="30" 
+                        aria-describedby="name-error"
+                        required/>
+                    <span 
+                        class="user_name_login-error" 
+                        id="name-error" 
+                        aria-live="polite"></span>
+                </div>
+                <div class="wrap_field">
+                    <label class="label_password" for="user_password_login">Ваш пароль</label>
+                    <input  
+                        class = "type-input"  
+                        type="password" 
+                        id="user_password_login" 
+                        minlength="6" 
+                        maxlength="20"
+                        aria-describedby="password-error"
+                        required/>
+                    <span 
+                        class="user_password_login-error" 
+                        id="password-error" 
+                        aria-live="polite"></span>
+                </div>
+                <div class="wrapper_button">
+                    <button 
+                        class="but_submit" 
+                        type="submit" 
+                        id="button_login">Войти</button>
+                    <span 
+                        class="empty-error" 
+                        id="empty-error" 
+                        aria-live="assertive" 
+                        aria-live="polite"></span>
+                    <button 
+                        onclick="showFormRegistration()" 
+                        type="button" 
+                        id="button_registration">Зарегистрироваться</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
